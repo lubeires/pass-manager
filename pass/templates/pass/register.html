@@ -1,0 +1,23 @@
+{% extends "pass/layout.html" %}
+
+{% block body %}
+<form action=" {% url 'register' %}" method="post" class="register">
+    {% csrf_token %}
+
+    {% if message %}
+    <div class="mb-2 alert alert-info" role="alert">{{ message }}</div>
+    {% endif %}
+
+    <h4 class="mb-3"><em>Create an account</em></h4>
+
+    <input type="email" class="form-control" placeholder="Email address" name="email">
+    <input type="password" class="form-control" placeholder="Password" name="password">
+    <input type="password" class="form-control" placeholder="Confirm password" name="confirmation">
+    <button class="btn btn-outline-info px-4 mt-3 mx-auto" type="submit">REGISTER</button>
+
+    <p class="mx-auto">Already have an account? <a class="text-info" href="{% url 'login' %}"><em>Log In
+                here.</em></a>
+    </p>
+</form>
+
+{% endblock %}

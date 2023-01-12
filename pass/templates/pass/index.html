@@ -1,0 +1,32 @@
+{% extends "pass/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="alert alert-info alert-dismissible fade show" role="alert" id="alert" style="display: none;">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div id="access-view" style="display: none;">
+    <form id="access-form" class="card p-5">
+        <h4 class="mb-3" id="access-view-title"></h4>
+
+        <input type="url" class="form-control" placeholder="Site url" id="form-site">
+        <input type="text" class="form-control" placeholder="Username" id="form-username">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Password" id="form-password">
+            <button type="button" class="btn btn-sm btn-outline-secondary p-auto" id="generate-password-button">
+                Generate
+            </button>
+        </div>
+
+        <div class="input-group">
+            <button type="button" class="btn btn-outline-secondary w-50" id="return-button">RETURN</button>
+            <input class="btn btn-outline-info w-50" type="submit" id="submit-access-button" />
+        </div>
+    </form>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4" id="accesses-view">
+
+</div>
+{% endblock %}
