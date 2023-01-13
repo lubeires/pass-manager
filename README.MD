@@ -1,9 +1,41 @@
 # Password Manager
 
-[<p align="center"><img src="./pass/static/pass/banner.png" width="600" /></p>](#)
+[<img src="./pass/static/pass/banner.png" width="700"  />](https://passmanager.onrender.com)
+<img src="https://i.imgur.com/hkj0dZm.gif" width="700" />
+<img src="https://i.imgur.com/TMPhpye.gif" width="700" />
 
-<p align="center"><img src="https://i.imgur.com/hkj0dZm.gif" width="600" /></p>
-<p align="center"><img src="https://i.imgur.com/TMPhpye.gif" width="600" /></p>
+## How to run
+
+### Prerequisites
+
+Before you start, you need to have [Python](https://www.python.org/downloads/) 3.8 (or higher version) installed on your machine.
+
+### Running
+
+```bash
+# clone this repository
+$ git clone <https://github.com/plhrsl/passmanager>
+
+# enter the project folder
+$ cd passmanager
+
+# start a virtual environment (here i'm using pipenv)
+$ pipenv shell
+
+# install the requirements to run the project
+$ pip install -r requirements.txt
+
+# make the migrations
+$ python manage.py makemigrations
+
+# apply migrations to your database
+$ python manage.py migrate
+
+# start the web server
+$ python manage.py runserver
+
+# the development server will start at http://localhost:8000/
+```
 
 ## How to run
 
@@ -91,3 +123,6 @@ The `pass` directory contains files and folders that make up a Django app. Let's
   - _`/accesses`_ - receives POST requests and creates new accesses.
 
   - _`/accesses/<int:access_id>`_ - receives GET, PUT and DELETE requests and returns, edits or removes an access based on id.
+  
+  
+#### Video demo: https://youtu.be/t5CFSgU1R5I
