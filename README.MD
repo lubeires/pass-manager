@@ -1,9 +1,8 @@
 # Password Manager
 
-[<p align="center"><img src="./pass/static/pass/banner.png" width="600" /></p>](https://passmanager.onrender.com)
-
-<p align="center"><img src="https://i.imgur.com/hkj0dZm.gif" width="600" /></p>
-<p align="center"><img src="https://i.imgur.com/TMPhpye.gif" width="600" /></p>
+[<img src="./pass/static/pass/banner.png" width="700"  />](https://passmanager.onrender.com)
+<img src="https://i.imgur.com/hkj0dZm.gif" width="700" />
+<img src="https://i.imgur.com/TMPhpye.gif" width="700" />
 
 ## How to run
 
