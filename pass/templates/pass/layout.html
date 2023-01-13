@@ -60,6 +60,11 @@
                         <a class="nav-link" aria-current="page" href="{% url 'login' %}">Login</a>
                     </li>
                     {% endif %}
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="https://github.com/plhrsl/pass-manager" target="_blank">
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -68,6 +73,9 @@
         {% block body %}
         {% endblock %}
     </div>
+    <footer class="fixed-bottom text-center bg-body-tertiary p-1">
+        &copy; 2023 Luana Palhares
+    </footer>
 </body>
 
 </html>
