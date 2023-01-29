@@ -1,6 +1,6 @@
 # Password Manager
 
-[<img src="./pass/static/pass/banner.png" width="700"  />](https://passmanager.onrender.com)
+[<img src="./pass/static/pass/new-banner.png" width="700"  />](https://passmanager.onrender.com)
 <img src="https://i.imgur.com/hkj0dZm.gif" width="700" />
 <img src="https://i.imgur.com/TMPhpye.gif" width="700" />
 
@@ -90,6 +90,5 @@ The `pass` directory contains files and folders that make up a Django app. Let's
   - _`/accesses`_ - receives POST requests and creates new accesses.
 
   - _`/accesses/<int:access_id>`_ - receives GET, PUT and DELETE requests and returns, edits or removes an access based on id.
-  
-  
+
 #### Video demo: https://youtu.be/t5CFSgU1R5I
