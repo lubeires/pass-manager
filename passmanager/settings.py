@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import os 
+import os
 import dj_database_url
 from pathlib import Path
 
@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", default="django-insecure-m8tqg5$pfs^_z+(0vl71924*as@858ch3%!8&ku*+v+8klo@6r")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", default="django-insecure-m8tqg5$pfs^_z+(0vl71924*as@858ch3%!8&ku*+v+8klo@6r")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "RENDER" not in os.environ
@@ -29,7 +30,7 @@ DEBUG = "RENDER" not in os.environ
 ALLOWED_HOSTS = []
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
-if RENDER_EXTERNAL_HOSTNAME:    
+if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles", 
+    "django.contrib.staticfiles",
     "pass"
 ]
 
@@ -81,14 +82,14 @@ WSGI_APPLICATION = "passmanager.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # "default": dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600)
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600)
 
-    
-    "default": {   
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    
+
+    # "default": {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #    }
+
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
